@@ -516,7 +516,6 @@ img {
 .portfolio-card > .portfolio-item {
   margin-left: var(--portfolio-card-gap);
   margin-top: var(--portfolio-card-gap);
-  /* border: 1px solid #eeeeee; */
 
   transition: box-shadow var(--transition-duration) var(--timing-function);
 }
@@ -803,6 +802,14 @@ img {
   right: 8px;
 }
 
+.icon-vector {
+  transition: fill var(--transition-duration) var(--timing-function);
+}
+
+.icon-vector:hover {
+  fill: var(--brand-color);
+}
+
 /* ФОРМА МОДАЛЬНОГО ОКНА */
 
 .title-modal {
@@ -819,16 +826,20 @@ img {
 }
 
 .modal-input {
+  display: block;
   width: 100%;
   height: 40px;
   margin-top: 4px;
   margin-bottom: 10px;
-  padding-left: 83px;
+  padding-left: 42px;
   padding-right: 10px;
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
   border-radius: 4px;
+  outline: none;
+
+  transition: border-color var(--transition-duration) var(--timing-function);
 }
 
 .modal-label {
@@ -854,6 +865,9 @@ img {
   border-radius: 4px;
 
   resize: none;
+  outline: none;
+
+  transition: border-color var(--transition-duration) var(--timing-function);
 }
 
 .modal-comment::placeholder {
@@ -869,6 +883,10 @@ img {
   letter-spacing: 0.03em;
 
   color: var(--paragraphs-mail-tel);
+
+  display: flex;
+  align-items: center;
+  margin-left: 8.38px;
 }
 
 .contract-link {
@@ -899,15 +917,15 @@ img {
 
 .modal-form-wrapper {
   position: relative;
+  display: block;
 }
 
 .form-svg {
   position: absolute;
-  left: 0;
-}
+  left: 12px;
+  top: 11px;
 
-.checkbox-wrapper {
-  text-align: center;
+  transition: fill var(--transition-duration) var(--timing-function);
 }
 
 .checkbox {
@@ -915,8 +933,48 @@ img {
   padding: 0;
   width: 16px;
   height: 15px;
+
+  appearance: none;
+
+  position: absolute;
 }
 
+.checkbox-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-input:focus + .form-svg {
+  fill: var(--brand-color);
+}
+
+.modal-input:focus,
+.modal-comment:focus {
+  border: 1px solid var(--brand-color);
+}
+
+.checkbox-icon {
+  width: 16px;
+  height: 15px;
+  border: 2px solid black;
+  border-radius: 2px;
+}
+
+.checkbox:checked + .checkbox-icon {
+  border-color: var(--brand-color);
+  background-color: var(--brand-color);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-origin: border-box;
+}
+
+.check-icon {
+  position: absolute;
+  top: 4px;
+  bottom: 3px;
+  transform: translateY(50%);
+}
 /*ДРУГИЕ СВОЙСТВА*/
 
 .visually-hidden {

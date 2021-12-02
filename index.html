@@ -446,8 +446,15 @@
 
 
                     <div class="modal-form-wrapper checkbox-wrapper">
-                        <input type="checkbox" name="agreement" value="agreement" id="agreement" class="checkbox">
-                        <label for="agreement" class="agreement-checkbox">Соглашаюсь с рассылкой и принимаю <a href="" class="contract-link">Условия договора</a></label>
+                        <label for="agreement" class="agreement-checkbox">
+                            <input type="checkbox" name="agreement" value="agreement" id="agreement" class="checkbox">
+                            <span class="checkbox-icon">
+                                <svg class="check-icon" width="11" height="8">
+                                    <use href="./img/icons.svg#icon-Vector-check"></use>
+                                </svg>
+                            </span>
+                            Соглашаюсь с рассылкой и принимаю <a href="" class="contract-link">Условия договора</a>
+                        </label>
                     </div>
 
                     <button type="submit" class="modal-form-btn">Отправить</button>
