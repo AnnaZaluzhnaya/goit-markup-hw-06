@@ -886,7 +886,6 @@ img {
 
   display: flex;
   align-items: center;
-  margin-left: 8.38px;
 }
 
 .contract-link {
@@ -959,6 +958,13 @@ img {
   height: 15px;
   border: 2px solid black;
   border-radius: 2px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: border-color var(--transition-duration) var(--timing-function),
+    background-color var(--transition-duration) var(--timing-function);
 }
 
 .checkbox:checked + .checkbox-icon {
@@ -969,12 +975,10 @@ img {
   background-origin: border-box;
 }
 
-.check-icon {
-  position: absolute;
-  top: 4px;
-  bottom: 3px;
-  transform: translateY(50%);
+.agreement-text {
+  margin-left: 7px;
 }
+
 /*ДРУГИЕ СВОЙСТВА*/
 
 .visually-hidden {
